@@ -14,9 +14,22 @@
   "contributes": {
     "commands": [
       {
-        "command": "autodoc-extension.helloWorld",
-        "title": "Hello World"
+        "command": "autodoc.generateDocs",
+        "title": "Generate Documentation"
       }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "autodoc.generateDocs",
+          "group": "navigation",
+          "when": "editorHasSelection"
+        }
+      ]
+    },
+    "enabledAPIproposals": [
+      "vscode.api",
+      "languageModels"
     ]
   },
   "scripts": {
